@@ -1,261 +1,185 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
-.content {
-  min-height: 100vh;
+
+body {
+  height: 100vh;
+  background-image: url(./images/img-paisagem.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
-}
-.header {
-  width: 100%;
-  height: 90px;
-  background-color: #22201e;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.logo {
-  flex: 0 0 210px;
-  padding-left: 40px;
-}
-.navegation-links {
-  display: flex;
-  gap: 0 20px;
-  padding-right: 40px;
-}
-.button {
-  font-size: 16px;
-  padding: 8px;
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.685);
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  transition: 0.4s;
-  border-bottom: 2px solid transparent;
-}
-.button:hover {
-  border-bottom-color: black;
-}
-.main-content {
-  flex: 1 0 auto;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 70px;
-  flex-wrap: wrap;
-}
-.box-content {
-  width: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px 5px;
-  cursor: pointer;
-  transition: 0.4s;
-}
-.item:hover {
-  background-color: gainsboro;
-  border: 1px solid brown;
-}
-div h3 {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 25px;
-  font-family: "Montserrat", sans-serif;
-}
-.subtitle {
-  text-align: center;
-  font-size: 17px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.item {
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  height: 350px;
-  font-size: 20px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-}
-.item img {
-  width: 280px;
-  min-height: 200px;
-  border-radius: 10px;
-}
-.sports-name {
-  margin-top: 10px;
-  align-self: self-start;
-  padding-left: 10px;
-}
-.description {
-  padding: 5px 10px 10px 10px;
-}
-.aside {
-  flex: 0 0 300px;
-  min-height: auto;
-  background-color: #2b2a30;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 20px 0;
-}
-.extra-items {
-  flex: 1 0 auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  transition: 0.4s;
 }
-.extra-items:hover {
-  background-color: rgba(0, 0, 0, 0.274);
+
+.container {
+  border: 2px solid #fff;
+  width: 35vw;
+  padding: 30px 40px;
+  min-width: 500px;
+  max-height: 600px;
 }
-.extra-items img {
-  width: 200px;
-  min-height: 100px;
-  border-radius: 10px;
-}
-.main-title-aside {
-  font-size: 20px;
-  text-align: center;
-  padding: 5px 25px 5px 25px;
-  margin-bottom: 15px;
-  border-bottom: 2px outset black;
-  background-color: rgba(0, 0, 0, 0.185);
-  color: white;
-}
-.title-aside {
-  font-size: 15px;
-  text-align: center;
-  padding-top: 10px;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-}
-.footer {
-  margin-top: 50px;
-  width: 100%;
-  height: 90px;
-  background-color: #22201e;
+
+.createTaskContainer {
+  background-color: #fff;
+  padding: 20px 30px;
+  height: 95px;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
-.tocomeback {
-  flex: 0 0 250px;
+
+.createTaskContainer input {
+  flex: 3;
+  padding: 12px;
+  border: 1px solid #d1d3d4;
+  border-radius: 5px;
+  font-weight: 500;
 }
-.tocomeback button {
-  background-color: transparent;
-  color: white;
-  padding: 10px;
+
+.createTaskContainer input:hover {
+  border: 2px solid #41b883;
 }
-@media (max-width: 930px) {
-  .box-content {
+
+.createTaskContainer input:focus {
+  outline: none;
+  border: 2px solid #41b883;
+}
+
+.createTaskContainer button {
+  flex: 1;
+  padding: 12px;
+  margin-left: 12px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: #41b883;
+  color: #fff;
+  cursor: pointer;
+}
+
+.taskContainer {
+  width: 100%;
+  max-height: 400px;
+  padding: 30px 20px;
+  margin-top: 60px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: auto;
+}
+
+.task-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+}
+
+.task-item p {
+  width: 250px;
+  height: auto;
+  word-wrap: break-word;
+}
+
+.task-item i {
+  color: #41b883;
+  cursor: pointer;
+}
+
+/* Utilities */
+
+.error {
+  border: 2px solid red !important;
+}
+.error::placeholder {
+  color: red;
+}
+
+.task-completed {
+  text-decoration: line-through;
+}
+
+/* Responsiviness */
+
+@media (max-width: 1024px) {
+  .container {
+  }
+  .taskContainer {
+    height: 200px;
+  }
+}
+
+@media (max-width: 510px) {
+  .container {
+    min-width: 400px;
+  }
+
+  .createTaskContainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 150px;
+  }
+
+  .createTaskContainer input {
+    width: 60vw;
+  }
+
+  .createTaskContainer input::placeholder {
+    text-align: center;
+  }
+
+  .createTaskContainer button {
+    margin: 0;
+    width: 25vw;
+  }
+
+  .taskContainer {
+    max-height: 230px;
+  }
+
+  .task-item p {
+    width: 150px;
+    height: auto;
+    word-wrap: break-word;
   }
 }
-@media (max-width: 490px) and (min-width: 280px) {
-  .header {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+
+@media (max-width: 405px) {
+  .container {
+    min-width: 350px;
   }
-  .logo {
-    padding-right: 40px;
-    padding-top: 10px;
-    flex-basis: 200px;
-  }
-  .navegation-links {
-    flex-basis: 100px;
-    padding-left: 30px;
+
+  .task-item p {
+    width: 120px;
   }
 }
-@media (max-width: 2560px) and (min-width: 1450px) {
-  .header {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+
+@media (max-width: 352px) {
+  .container {
+    min-width: 300px;
   }
-  .main-content {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 250px 60px;
+
+  .createTaskContainer input {
+    width: 180px;
   }
-  .aside {
-    flex: 0 0 600px;
-    min-height: auto;
+
+  .createTaskContainer button {
+    width: 100px;
   }
-  .extra-items {
-    width: 100%;
-  }
-  .extra-items img {
-    width: 300px;
-    min-height: 200px;
-  }
-  .title-aside {
-    font-size: 25px;
-  }
-  .box-content {
-    gap: 150px 200px;
-  }
-  .item {
-    width: 600px;
-  }
-  .item img {
-    width: 400px;
-    min-height: 300px;
-  }
-}
-@media (max-width: 1209px) and (min-width: 300px) {
-  .main-content {
-    gap: 30px 0;
-  }
-  .box-content {
-    border-bottom: 1px solid black;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-  }
-  .aside {
-    flex: 0 1 600px;
-  }
-}
-@media (max-width: 1209px) and (min-width: 360px) {
-  .aside {
-    gap: 30px 0;
-  }
-  .extra-items {
-    width: 100%;
-    flex-shrink: 1;
-  }
-  .extra-items img {
-    width: 250px;
-    min-height: 150px;
-  }
-  .title-aside {
-    font-size: 15px;
-  }
-  .aside:last-child {
-    padding-bottom: 30px;
-  }
-}
-@media (max-width: 500px) and (min-width: 280px) {
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  .tocomeback {
-    flex: 0 1 200px;
-    align-self: center;
-    padding-left: 15px;
+
+  .task-item p {
+    width: 70px;
   }
 }
